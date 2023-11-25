@@ -1,5 +1,5 @@
 // PG database client/connection setup
-const { Pool } = require("pg");
+const pg = require("pg");
 
 // const dbParams = {
 //   // host: process.env.DB_HOST,
@@ -10,7 +10,7 @@ const { Pool } = require("pg");
 // };
 // const db = new Pool(dbParams);
 
-const db = new Pool({
+const db = new pg.Pool({
   connectionString: process.env.DATABASE_URL || "",
   ssl: process.env.DATABASE_URL ? { rejectUnauthorized: false } : false
 });
