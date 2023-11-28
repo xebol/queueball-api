@@ -11,7 +11,7 @@ const http = require("http");
 const server = http.createServer(app);
 const io = socketIo(server, {
   cors: {
-    origin: "https://cool-dango-c539f4.netlify.app/"
+    origin: "https://cool-dango-c539f4.netlify.app"
   }
 });
 
